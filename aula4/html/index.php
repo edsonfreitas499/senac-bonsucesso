@@ -130,7 +130,7 @@
                     <div class="col-md-4">
                         <h2><?=$titulo[$i]?></h2>
                         <p><?=$texto[$i]?> </p>
-                        <p><a class="btn btn-secondary" href="detalhe.php?id-<?$id[$i]?>" role="button">Ver detalhes &raquo;</a></p>
+                        <p><a class="btn btn-secondary" href="detalhe.php?id-<?$id[$i]?>" role="button">Ver detalhes $laquo</a></p>
                      </div>
 
            <?php

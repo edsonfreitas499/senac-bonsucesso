@@ -148,40 +148,41 @@
       ================================================== -->
       <!-- Envolve o resto da página em outro container, para centralizar todo o conteúdo. -->
 
+      <main role="main">
+
 <div class="container">
-
-<?php
-  $t = count($id);
-  $ql = 0;
-  for($i = 0; $i < $t; $i++) {
-    if($ativo[$i] == true){
-       if($ql == 0) {
-?>
-          <div class="row">
-
- <?php
-       }
- ?>
-
-            <div class="col-md-4">
-                <h2><?=$titulo[$i]?></h2>
-                <p><?=$texto[$i]?> </p>
-                <p><a class="btn btn-secondary" href="detalhe.php?id-<?$id[$i]?>" role="button">Ver detalhes &raquo;</a></p>
-             </div>
-
-   <?php
-   
-        if($ql == 2) {
-          echo "</div>";
-          $ql = 0;
-        } else {
-              $ql++;
-        } 
-      }
-    }
-    
+  <div style="padding: 3rem 1.5rem; text-align: center;">
+    <?php
+      if(isset($_GET["id"])){
+        $idx = NULL;
+          for($i=0; $i < count($id); $i++){
+            if($_GET["id"] == $id[$i]){
+              $idx = $i;
+            }
+          }  
     ?>
 
+                <h1><?=$titulo[$idx]?></h1>
+                <p class="lead"><?=$texto[$idx]?> </p>
+                <p>
+                  <a class="btn btn-secondary" href="inicio.php" role="button">Ver detalhes
+                  $raquo; Voltar 
+                  </a>
+               </p>
+             
+
+      <?php
+      } else {
+        header("location:inicio.php");
+      }
+      ?>
+
+</div>
+</div>
+
+      </main>
+
+   
 
    <!--   <div class="container marketing">
 
@@ -250,7 +251,7 @@
 
         <!-- /FIM DAS FEATUREZINHAS *-* -->
 
-      </div><!-- /.container -->
+     ><!-- /.container -->
 
 
       <!-- FOOTER -->
