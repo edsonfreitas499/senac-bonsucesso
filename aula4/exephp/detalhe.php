@@ -5,46 +5,55 @@
 
     $id[] = 1;
     $titulo[] = "1º titulo";
+    $img[] = "<img src= img/carro.png width=500 height=500/>";
     $texto[] = "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.";
     $ativo[] = true;
 
     $id[] = 2;
     $titulo[] = "2º titulo";
+    $img[] = "<img src= img/car1.png width=500 height=200/>";
     $texto[] = "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.";
     $ativo[] = true;
 
     $id[] = 3;
     $titulo[] = "3º titulo";
+    $img[] = "<img src= img/car2.png width=500 height=500/>";
     $texto[] = "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.";
     $ativo[] = true;
 
     $id[] = 4;
     $titulo[] = "4º titulo";
+    $img[] = "<img src= img/car4.png width=500 height=500/>";
     $texto[] = "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.";
     $ativo[] = true;
 
     $id[] = 5;
     $titulo[] = "5º titulo";
+    $img[] = "<img src= img/car4.png width=500 height=500/>";
     $texto[] = "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.";
     $ativo[] = true;
 
     $id[] = 6;
     $titulo[] = "6º titulo";
+    $img[] = "<img src= img/car5.png width=500 height=500/>";
     $texto[] = "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.";
     $ativo[] = true;
 
     $id[] = 7;
     $titulo[] = "7º titulo";
+    $img[] = "<img src= img/car6.png width=500 height=500/>";
     $texto[] = "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.";
     $ativo[] = true; 
     
     $id[] = 8;
     $titulo[] = "8º titulo";
+    $img[] = "<img src= img/car7.png width=500 height=500/>";
     $texto[] = "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.";
     $ativo[] = true;
 
     $id[] = 9;
-    $titulo[] = "8º titulo";
+    $titulo[] = "9º titulo";
+    $img[] = "<img src= img/car8.png width=500 height=500/>";
     $texto[] = "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.";
     $ativo[] = true;
 ?>
@@ -148,7 +157,7 @@
       ================================================== -->
       <!-- Envolve o resto da página em outro container, para centralizar todo o conteúdo. -->
 
-      <main role="main">
+
 
 <div class="container">
   <div style="padding: 3rem 1.5rem; text-align: center;">
@@ -163,10 +172,11 @@
     ?>
 
                 <h1><?=$titulo[$idx]?></h1>
+                <?=$img[$idx]?>
                 <p class="lead"><?=$texto[$idx]?> </p>
                 <p>
-                  <a class="btn btn-secondary" href="inicio.php" role="button">Ver detalhes
-                  $raquo; Voltar 
+                  <a class="btn btn-secondary" href="inicio.php" role="button">
+                  &laquo; Voltar 
                   </a>
                </p>
              
@@ -180,78 +190,12 @@
 </div>
 </div>
 
-      </main>
+    
 
    
 
-   <!--   <div class="container marketing">
+   
 
-        <!-- Três colunas de texto, abaixo do carousel 
-        <div class="row">
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Título</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Título</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Título</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 
-        </div><!-- /.row 
-
-
-        <!-- COMEÇAM AS MENCIONADAS FEATUREZINHAS xD 
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">Primeiro título de featurezinhas. <span class="text-muted">Supreendente, não?!</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Aêêê, moleque! <span class="text-muted">Tá legal ou não tá?</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">E, por último, essa aqui. <span class="text-muted">Xeque-mate!</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- /FIM DAS FEATUREZINHAS *-* -->
-
-     ><!-- /.container -->
 
 
       <!-- FOOTER -->
