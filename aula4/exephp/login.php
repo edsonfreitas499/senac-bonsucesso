@@ -1,3 +1,25 @@
+<?php
+	define("USER", "carro@gmail.com");
+	define("SENHA", "123456");
+
+	if(isset($_POST["btnLogin"])) {
+		$login = $_POST["txtLogin"];
+		$senha = base64_encode($_POST["txtSenha"]);
+		if($login == USER && base64_decode($senha) == SENHA) {
+			$login = base64_encode($login);
+			header("location:inicio.php?user=$login");
+		} else {
+			echo "<script>alert('Login e senha incorretos');</script>";
+		}
+	}	
+			
+
+
+?>
+
+
+
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -20,10 +42,10 @@
     <form class="form-signin">
       <img class="mb-4" src="img/carro.png" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
-      <label for="inputEmail" class="sr-only">Endereço de email</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
-      <label for="inputPassword" class="sr-only">Senha</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+      <label for="txtLogin" class="sr-only">Endereço de email</label>
+      <input type="email"  name="txtLogin" id="txtLogin" class="form-control" placeholder="Seu email" required autofocus>
+      <label for="txtSenha" class="sr-only">Senha</label>
+      <input type="password" name="txtSenha" id="txtSenha" class="form-control" placeholder="Senha" required>
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Lembrar de mim

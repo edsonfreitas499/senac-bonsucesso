@@ -1,3 +1,7 @@
+<?php require_once("inc/header.php"); ?>
+
+<?php require_once("app.php");?>
+
 <?php
   /*
     Criação de objeto em Array
@@ -56,7 +60,15 @@
     $img[] = "<img src= img/car8.png width=200 height=200/>";
     $texto[] = "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.";
     $ativo[] = true;
+
+    $id[] = 9;
+    $titulo[] = "9º titulo";
+    $img[] = "<img src= img/car8.png width=200 height=200/>";
+    $texto[] = "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.";
+    $ativo[] = true;
 ?>
+
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -66,7 +78,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Template para o carousel Bootstrap</title>
+    <title><?=NOME_SITE?></title>
 
     <!-- Principal CSS do Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -76,31 +88,7 @@
   </head>
   <body>
 
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Carousel</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(atual)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Desativado</a>
-            </li>
-          </ul>
-          <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-          </form>
-        </div>
-      </nav>
-    </header>
+    
 
     <main role="main">
 
@@ -115,7 +103,7 @@
             <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1>Manchete</h1>
+                <h1><?=NOME_SITE?>!</h1>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
               </div>
@@ -125,7 +113,7 @@
             <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
-                <h1>Outra manchete</h1>
+                <h1><?=NOME_SITE?>!</h1>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
               </div>
@@ -135,7 +123,7 @@
             <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
-                <h1>Outra manchete, pra garantir</h1>
+                <h1><?=NOME_SITE?>!</h1>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
               </div>
@@ -175,13 +163,15 @@
             <div class="col-md-4">
                 <h2><?=$titulo[$i]?></h2>
                <center> <?=$img[$i]?> </center>
-                <p><?=$texto[$i]?> </p>
+                <p><?=$texto[$i]?><?=substr($texto[$i])?> </p>
                 <p><a class="btn btn-secondary" href="detalhe.php?id=<?=$id[$i];?>" role="button">Ver detalhes &laquo;</a></p>
              </div>
 
+             
+
    <?php
    
-        if($ql == 2) {
+        if($ql == 2 ) {
           echo "</div>";
           $ql = 0;
         } else {
@@ -193,17 +183,15 @@
     ?>
 
 
-   >
+   
 
       </div><!-- /.container -->
 
 
       <!-- FOOTER -->
-      <footer class="container" >
-        <p class="float-right"><a href="#">Voltar ao topo</a></p>
-        <p>&copy; Companhia S.A., 2017-2018 &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
-      </footer>
-    </main>
+      <?php require_once("inc/footer.php"); ?>
+
+   </main>
 
     <!-- Principal JavaScript do Bootstrap
     ================================================== -->
